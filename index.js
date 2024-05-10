@@ -36,9 +36,11 @@ io.on("connection" , (socket)=>{
             clients[targetId].emit("message" , msg);
         };
     })
-    app.route("/check").get((req , res)=>{
-        return res.json("Working");
-    });
+
+});
+
+app.route("/check").get((req , res)=>{
+    return res.json("Working");
 });
 
 server.listen(port , ()=>{
